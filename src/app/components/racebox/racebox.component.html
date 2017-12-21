@@ -1,0 +1,22 @@
+<div *ngFor="let featuredRace of filteredNextRaces; let i=index" (changeFilter)="saveData($event)">
+    <div id="RaceBox" class="col-md-12" *ngIf="i<1">
+        <div class="row" >
+            <h3 class="event-details col-12 text-left bold border-bottom">
+                <component-countryflag flagId="{{featuredRace.event.country}}"></component-countryflag>
+                {{featuredRace.event.title}}
+                <component-counter count="300"></component-counter>
+            </h3>
+        </div>
+        <div class="row">
+            <span class="event-details col-9">{{featuredRace.num_runners}} runners | {{featuredRace.distance | number}}m | {{featuredRace.purse.amount | number}} {{featuredRace.purse.currency}}</span>
+            <span class="col-3 text-right icon icon-race-type-{{featuredRace.race_type}}"></span>
+        </div>
+
+        <ul>
+            <li class="row runner" *ngFor="let runner of featuredRace.runners">
+                <span class="col-9 name"><img *ngIf="runner.silk" class="silk" src="/assets/images/{{runner.silk}}" />{{runner.name}}</span>
+                <span class="col-3 odds text-right"><a href="http://www.racebets.com/bet/{{featuredRace.id_race}}" class="btn-odd">{{runner.odds}}</a></span>
+            </li>
+        </ul>
+    </div>
+</div>

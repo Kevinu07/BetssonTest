@@ -1,0 +1,13 @@
+.bold {
+    font-weight: bold;
+}
+
+.component {
+    max-width: 240px; 
+    display: block;
+}
+
+h1 {
+    font-size: 11px !important;
+    margin: 0px;
+}

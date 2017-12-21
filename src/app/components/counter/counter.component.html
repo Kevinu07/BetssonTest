@@ -1,0 +1,4 @@
+<span class="float-right">
+    <span *ngIf="count > 0">{{countDown | async}} minute<span *ngIf="count > 1">s</span></span>
+    <span *ngIf="count <= 0">Due</span>
+</span>

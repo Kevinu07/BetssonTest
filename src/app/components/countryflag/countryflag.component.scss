@@ -1,0 +1,21 @@
+.c-flag {
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    margin-left: 1px;
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px rgba(165,165,165,.6);
+    background: url("/assets/images/flags-sd898df6596.png") 0 11px no-repeat #f7f766;
+}
+
+.isCountryGB {
+    background-position: 50% -856px;
+    background-color: #fff;
+}
+
+.isCountryIE {
+    background-position: 50% -1142px;
+    background-color: #fff;
+}

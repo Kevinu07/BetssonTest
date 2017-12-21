@@ -1,0 +1,5 @@
+<div class="row">
+    <div *ngFor="let filter of filters" class="col-3 filter">
+        <input type="checkbox" [checked]="filter.checked" (click)="change(filter)"><span class="icon-race-type-{{filter.race_type}}"></span>
+    </div>
+</div>
