@@ -8,6 +8,7 @@ export interface IRaceBox {
     filter: any;
     selectedFilters: (filter: string[]) => void;
     getNextRaces: () => void;
+    getMinsToStart: (timestamp: number) => number;
     convertToEUR: (currency: string, amount: number) => number;
     getFilteredRaces: () => void;
 }

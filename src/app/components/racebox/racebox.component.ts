@@ -56,11 +56,18 @@ export class RaceBoxComponent implements IRaceBox{
         err => console.log(err));
     }
 
-    getMinsToStart = (timestamp): string => {
-        var raceDate = new Date(timestamp*1000);
-        // var currentDate = newDate();
-        // var diff = Math.abs(raceDate - new Date());
-        return null;
+    getMinsToStart = (timestamp): number => {
+        var raceDate: any = new Date(timestamp*1000);
+        var currentDate: any = new Date();
+        var diffMs = raceDate - currentDate;
+
+        var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+
+        if (diffMins < 0){
+            return 0;
+        }
+
+        return diffMins;
     }
 
     convertToEUR = (currency, amount): number => {

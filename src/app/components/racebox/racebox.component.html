@@ -4,7 +4,7 @@
             <h3 class="event-details col-12 text-left bold border-bottom">
                 <component-countryflag flagId="{{featuredRace.event.country}}"></component-countryflag>
                 {{featuredRace.event.title}}
-                <component-counter count="300"></component-counter>
+                <component-counter count="{{getMinsToStart(featuredRace.post_time)}}"></component-counter>
             </h3>
         </div>
         <div class="row">
